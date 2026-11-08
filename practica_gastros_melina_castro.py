@@ -6,6 +6,7 @@ contador_registros = 0
 
 #función que muestre las opciones del menú
 def mostrar_menu(): 
+    """Muestra las opciones disponibles del menúde gestor de gastos"""
     print("\nGestor de Gastos Personales")
     print("1. Registrar gasto")
     print("2. Ver lista gastos")
@@ -14,6 +15,7 @@ def mostrar_menu():
 
 #definir la función y sus parámetros
 def registrar_gasto(gastos, moneda="₡"):
+    """Registra los gastos con su monto respectivo"""
     
     #acceder a variable global
     global contador_registros 
@@ -46,6 +48,7 @@ def registrar_gasto(gastos, moneda="₡"):
 
 #función para mostrar gastos registrados 
 def mostrar_gastos(gastos, moneda="₡"): 
+    """Muestra los gastos registrados en el sistema"""
     
     #Verificar que existan gastos en la lista
     if len(gastos) == 0: 
@@ -67,6 +70,8 @@ def mostrar_gastos(gastos, moneda="₡"):
 
 #Función para calcular el total
 def calcular_total(gastos): 
+    """Calcula el total de los gastos ingresados"""
+    
     #Iniciar el acumulador
     total = 0 
     
@@ -79,6 +84,7 @@ def calcular_total(gastos):
 
 #Función para calcular el resumen de gastos
 def obtener_resumen(gastos): 
+    """Calcula el resumen de los gastos"""
     
     #Verificar si existen registros de gastos
     if len(gastos) == 0: 
@@ -103,6 +109,7 @@ def obtener_resumen(gastos):
 
 #Función mostrar resumen de gastos
 def mostrar_resumen(gastos, moneda="₡"):
+    """Muestra el resumen de los gastos ingresados"""
     
     #Obtener los resultados de la función anterior
     total, promedio, gasto_mayor = obtener_resumen(gastos)
@@ -120,6 +127,7 @@ def mostrar_resumen(gastos, moneda="₡"):
 
 #Función principal del programa        
 def main():
+    """Realiza la función principal del programa"""
     
     #Mantener el menú activo hasta que el usuario seleccione salir
     while True: 
